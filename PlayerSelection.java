@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class PlayerSelection {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         Player newPlayer1 = new Player("sad",14,"spin",15);
         Player newPlayer2 = new Player("fad",14,"spin",15);
         Player newPlayer3 = new Player("grd",14,"spin",15);
@@ -21,6 +22,16 @@ public class PlayerSelection {
 
             switch (get){
                 case "A":
+                    System.out.println("Enter player name: ");
+                    String playerName = input.next();
+                    System.out.println("Enter player age: ");
+                    int playerAge = input.nextInt();
+                    System.out.println("Enter player type: ");
+                    String playerType = input.next();
+                    System.out.println("Enter player statistics: ");
+                    double playerStat = input.nextDouble();
+                    Player newPlayer = new Player(playerName,playerAge,playerType,playerStat);
+                    playerList.add(newPlayer);
                     break;
                 case "B":
                     break;
