@@ -21,6 +21,16 @@ public class PlayerSelection {
 
             switch (get){
                 case "A":
+                    System.out.println("Enter player name: ");
+                    String playerName = myScnr.next();
+                    System.out.println("Enter player age: ");
+                    int playerAge = myScnr.nextInt();
+                    System.out.println("Enter player type: ");
+                    String playerType = myScnr.next();
+                    System.out.println("Enter player statistics: ");
+                    double playerStat = myScnr.nextDouble();
+                    Player newPlayer = new Player(playerName,playerAge,playerType,playerStat);
+                    playerList.add(newPlayer);
                     break;
                 case "B":
                     for(int i = 0 ;i< playerList.size(); i++){
